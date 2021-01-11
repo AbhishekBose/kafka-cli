@@ -1,7 +1,7 @@
 from confluent_kafka import Consumer
 
 class consumer:
-    def __init__(self,broker,group,topic):
+    def __init__(self,broker="localhost:2181",group,topic):
         self.broker = broker
         self.group = group
         self.con = Consumer(
