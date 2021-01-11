@@ -6,8 +6,8 @@ class consumer:
         self.group = group
         self.con = Consumer(
             {
-                'bootstrap.servers': broker,
-                'group.id': group,
+                'bootstrap.servers': self.broker,
+                'group.id': self.group,
                 'auto.offset.reset': 'earliest'
             }
         )
@@ -16,7 +16,11 @@ class consumer:
         
     def start_reading(self):
         
+        # try:
         self.con.subscribe([self.topic])
+        # except Exception as e:
+        #     print("Original exception is :: {}".format(str(e)))
+        #     raise Exception("Topic issue")
 
         print("Going to read messages from kafka topic {}. Press CTRL + C to stop".format(self.topic))
         while True:

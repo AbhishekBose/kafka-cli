@@ -1,1 +1,2 @@
-from .app import Kafka
+# from .app import Kafka
+from .Kafka import consumer
