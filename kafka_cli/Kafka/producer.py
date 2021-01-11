@@ -19,7 +19,8 @@ class producer:
         if err is not None:
             print('Message delivery failed: {}'.format(err))
         else:
-            print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
+            print("Message successfully delivered")
+            # print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
 
 
     def produce(self,msg,json_needed=True):
