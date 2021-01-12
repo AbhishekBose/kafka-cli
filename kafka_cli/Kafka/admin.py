@@ -3,7 +3,7 @@ from confluent_kafka.admin import AdminClient, NewTopic
 class admin:
     def __init__(self,broker="localhost:9092"):
         self.broker = broker
-        self.a = AdminClient({'bootstrap.servers': 'mybroker'})
+        self.a = AdminClient({'bootstrap.servers': self.broker})
 
     def _createTopic(self,a,topicList,num_partitions=2,replication_factor=1):
         new_topics = [NewTopic(topic, num_partitions=num_partitions, replication_factor=replication_factor) for topic in topicList]

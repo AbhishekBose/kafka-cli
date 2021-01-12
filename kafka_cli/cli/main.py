@@ -10,3 +10,5 @@ def start():
     answers = options.option_page()
     kafkaObj = KafkaBase(answers)
 
+if __name__ == "__main__":
+    start()
