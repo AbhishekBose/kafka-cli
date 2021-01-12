@@ -43,11 +43,15 @@ class options:
             }
         ]
         answers = prompt(questions)
-        
+
         if answers["choices"]=="consume":
-            prompt(con_question)
+            opt_answer = prompt(con_question)
         else:
-            prompt(prod_question)
+            opt_answer = prompt(prod_question)
+        
+        answers.update(opt_answer)
+        print(answers)
+        return answers
 
 if __name__ == "__main__":
     options.option_page()

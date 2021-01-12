@@ -1,6 +1,6 @@
 from confluent_kafka import Producer
 import json
-from admin import admin
+from .admin import admin
 
 class producer:
     def __init__(self,topic,broker="localhost:9092",partition=None):

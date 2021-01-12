@@ -1,5 +1,5 @@
 from confluent_kafka import Consumer
-from admin import admin
+from .admin import admin
 
 class consumer:
     def __init__(self,topic,broker="localhost:9092",group="group1"):
