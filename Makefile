@@ -17,6 +17,9 @@ lint:
 	@bandit -r --ini setup.cfg
 
 clean:
+	rm -rf ./kafka_cli/__pycache__/*.pyc
+	rm -rf ./kafka_cli/Kafka/__pycache__/
+	rm -rf ./tests/__pycache__/
 	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
 
 .PHONY: clean test

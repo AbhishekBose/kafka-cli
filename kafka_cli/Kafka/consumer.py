@@ -1,4 +1,5 @@
 from confluent_kafka import Consumer
+from admin import admin
 
 class consumer:
     def __init__(self,topic,broker="localhost:9092",group="group1"):
@@ -12,6 +13,13 @@ class consumer:
             }
         )
         self.topic = topic
+        self.a = admin(self.broker)
+
+        if not self.__checkTopic():
+            exit()
+
+    def __checkTopic(self):
+        return self.a.check_if_topic_present(self.topic)
 
         
     def start_reading(self):

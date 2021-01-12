@@ -1,5 +1,6 @@
 from confluent_kafka import Producer
 import json
+from admin import admin
 
 class producer:
     def __init__(self,topic,broker="localhost:9092",partition=None):
@@ -11,6 +12,14 @@ class producer:
             }
         )
         self.topic = topic
+        self.a = admin(self.broker)
+
+        if not self.__checkTopic():
+            exit()
+
+    def __checkTopic(self):
+        return self.a.check_if_topic_present(self.topic)
+
     
     def __delivery_report(self,err, msg):
         """ Called once for each message produced to indicate delivery result.
