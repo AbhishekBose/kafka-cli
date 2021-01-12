@@ -8,7 +8,7 @@ class options:
         questions = [
             {
                 'type': 'list',
-                'name': 'Kafka operation',
+                'name': 'choices',
                 'message': 'What operation do you want to perform?',
                 'choices': ['Produce', 'Consume'],
                 'filter': lambda val: val.lower()
@@ -27,8 +27,27 @@ class options:
             }
         ]
 
+        con_question = [
+            {
+                "type":"confirm",
+                "name":"start",
+                "message":"Shall we start reading messages?"
+            }
+        ]
+        
+        prod_question = [
+            {
+                "type":"confirm",
+                "name":"start",
+                "message":"Shall we start producing messages?"
+            }
+        ]
         answers = prompt(questions)
-        print(answers)
+        
+        if answers["choices"]=="consume":
+            prompt(con_question)
+        else:
+            prompt(prod_question)
 
 if __name__ == "__main__":
     options.option_page()
