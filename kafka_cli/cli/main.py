@@ -13,6 +13,12 @@ def start():
 
     topic_answers = options.topic_option(kafkaObj.getTopicList())
     print(topic_answers)
-    
+    if kafkaObj.checkTopic(topic_answers):
+        response = options.confirm_opt(opt_answers)
+        if response["start"]:
+            kafkaObj.start(topic_answers)
+
+
+
 if __name__ == "__main__":
     start()

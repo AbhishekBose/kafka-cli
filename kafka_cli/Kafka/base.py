@@ -19,17 +19,18 @@ class KafkaDetails:
 
 class KafkaBase(KafkaDetails):
     def __init__(self,option_dict):
-        self.broker = option_dict["broker"]
+        self.data = option_dict
+        self.broker = self.data["broker"]
 
         super().__init__(self.broker)
         # self.topic = option_dict["topic"]
-        # self.type = option_dict["choices"]
+        self.type = option_dict["choices"]
 
         # self.a = admin(self.broker)
         # if not self.__checkTopic():
         #     exit()
 
-        # if self.type=="consume":
+        # 
         #     self.con_obj = consumer(self.topic)
         #     if option_dict["start"]:
         #         self.__read()
@@ -38,12 +39,16 @@ class KafkaBase(KafkaDetails):
             # if option_dict["start"]:
             #     self.__send()
             
-        
+    def start(self,topic_data):
+        if self.type=="consume":
+            self.con_obj = consumer(topic_data["topic"])
+            self.__read()
+            
     # def __send(self):
     #     self.prod_obj.
 
-    def __checkTopic(self):
-        return self.a.check_if_topic_present(self.topic)
+    def checkTopic(self,data):
+        return self.admin_obj.check_if_topic_present(data["topic"])
 
     def __read(self):
         self.con_obj.start_reading()

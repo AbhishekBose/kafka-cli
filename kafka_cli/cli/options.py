@@ -53,31 +53,41 @@ class options:
         return answers
 
     @staticmethod
+    def confirm_opt(opt_type):
+        con_question = [
+            {
+                "type":"confirm",
+                "name":"start",
+                "message":"Shall we start reading messages?"
+            }
+        ]
+        
+        prod_question = [
+            {
+                "type":"confirm",
+                "name":"start",
+                "message":"Shall we start producing messages?"
+            }
+        
+        ]
+        if opt_type["choices"]=="consume":
+            opt_answer = prompt(con_question)
+        else:
+            opt_answer = prompt(prod_question)
+        
+        return opt_answer
+
+    @staticmethod
     def topic_option(topic_list):
 
         topic_list = ["other"]+topic_list
         # exit()
-        # con_question = [
-        #     {
-        #         "type":"confirm",
-        #         "name":"start",
-        #         "message":"Shall we start reading messages?"
-        #     }
-        # ]
-        
-        # prod_question = [
-        #     {
-        #         "type":"confirm",
-        #         "name":"start",
-        #         "message":"Shall we start producing messages?"
-        #     }
-        
-        # ]
+        # 
         if len(topic_list):
             questions = [
                 {
                     "type": "list",
-                    "name":"topics",
+                    "name":"topic",
                     "message":"Select topic from below. Choose other in case not present:",
                     "choices":topic_list,
                     'filter': lambda val: val.lower()
@@ -87,13 +97,9 @@ class options:
         else:
             answers = {}
         
-        # if answers["choices"]=="consume":
-        #     opt_answer = prompt(con_question)
-        # else:
-        #     opt_answer = prompt(prod_question)
-        
-        # answers.update(opt_answer)
-        
+
+        if answers["topic"]=="other":
+            answers = options.topic_prompt()
         return answers
 
 if __name__ == "__main__":
