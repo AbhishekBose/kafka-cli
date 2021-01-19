@@ -26,6 +26,12 @@ class admin:
         else:
             return 1
 
+    def get_topic_list(self):
+        md = self.a.list_topics(timeout=10)
+        del(md.topics["__consumer_offsets"])
+        # print(list(md.topics.keys()))
+        return list(md.topics.keys())
+
     def check_if_topic_present(self,topic):
         try:
             p_x= self._checkTopic(topic)
@@ -45,3 +51,9 @@ class admin:
         else:
             print('Topics werent created')
             return 0    
+
+# if __name__ == "__main__":
+#     ad = admin()
+#     md = ad.a.list_topics(timeout=10)
+#     del(md.topics["__consumer_offsets"])
+#     print(list(md.topics.keys()))

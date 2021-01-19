@@ -13,6 +13,9 @@ def test_consumer_broker():
 def test_consumer_topic():
     assert con.topic == topic
 
+# def test_subscription():
+#     assert con
+
 # def test_unknown_topic():
 #     topic = "random_topic"
 #     con2 = kafka_cli.consumer.consumer(topic=topic)

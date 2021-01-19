@@ -15,7 +15,6 @@ class producer:
         self.a = admin(self.broker)
 
         if not self.__checkTopic():
-            
             exit()
 
     def __checkTopic(self):
@@ -41,3 +40,8 @@ class producer:
             x =msg.encode('utf-8')
         self.prod.produce(self.topic,x,callback=self.__delivery_report)
         self.prod.poll(0)
+
+# if __name__ == "__main__":
+#     prod = producer("test_topic")
+#     message = {"Hello"}
+#     prod.produce(message)
