@@ -7,8 +7,12 @@ from options import options
 
 
 def start():
-    answers = options.option_page()
-    kafkaObj = KafkaBase(answers)
+    opt_answers = options.opt_option()
+    print(opt_answers)
+    kafkaObj = KafkaBase(opt_answers)
 
+    topic_answers = options.topic_option(kafkaObj.getTopicList())
+    print(topic_answers)
+    
 if __name__ == "__main__":
     start()
