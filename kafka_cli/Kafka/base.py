@@ -26,15 +26,6 @@ class KafkaBase(KafkaDetails):
         # self.topic = option_dict["topic"]
         self.type = option_dict["choices"]
 
-        # self.a = admin(self.broker)
-        # if not self.__checkTopic():
-        #     exit()
-
-        # 
-        #     self.con_obj = consumer(self.topic)
-        #     if option_dict["start"]:
-        #         self.__read()
-        # else:
         #     self.prod_obj = producer(self.topic)
             # if option_dict["start"]:
             #     self.__send()
@@ -43,7 +34,7 @@ class KafkaBase(KafkaDetails):
         if self.type=="consume":
             self.con_obj = consumer(topic_data["topic"])
             self.__read()
-            
+
     # def __send(self):
     #     self.prod_obj.
 
