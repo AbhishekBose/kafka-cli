@@ -16,13 +16,26 @@ class options:
             },
 
             {
+                'type': 'confirm',
+                'name': 'broker',
+                'message': 'Is your broker localhost:9092?',
+            }
+        ]
+
+        broker_question = [
+            {
                 'type': 'input',
                 'name': 'broker',
-                'message': 'What is your broker address?',
+                'message': 'What is your broker?',
                 'filter': lambda val: val.lower()
             }
         ]
         answers = prompt(questions)
+        if answers["broker"]:
+            answers["broker"]="localhost:9092"
+        else:
+            broker_answer = prompt(broker_question)
+            answers["broker"]= broker_answer["broker"]
         return answers
     
 
