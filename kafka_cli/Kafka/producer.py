@@ -15,6 +15,7 @@ class producer:
         self.a = admin(self.broker)
 
         if not self.__checkTopic():
+            
             exit()
 
     def __checkTopic(self):

@@ -5,9 +5,9 @@ class admin:
         self.broker = broker
         self.a = AdminClient({'bootstrap.servers': self.broker})
 
-    def _createTopic(self,a,topicList,num_partitions=2,replication_factor=1):
+    def _createTopic(self,topicList,num_partitions=2,replication_factor=1):
         new_topics = [NewTopic(topic, num_partitions=num_partitions, replication_factor=replication_factor) for topic in topicList]
-        fs = a.create_topics(new_topics)
+        fs = self.a.create_topics(new_topics)
         for topic, f in fs.items():
             try:
                 f.result()  # The result itself is None
@@ -30,7 +30,7 @@ class admin:
         try:
             p_x= self._checkTopic(topic)
             if p_x==0:
-                p_y = self._createTopic(a,[topic])
+                p_y = self._createTopic([topic])
             else:
                 p_y=1
                 print(topic+' already present')
