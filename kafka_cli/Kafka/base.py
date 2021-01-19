@@ -13,8 +13,12 @@ class KafkaBase:
         self.type = option_dict["choices"]
         if self.type=="consume":
             self.con_obj = consumer(self.topic)
+            if option_dict["start"]:
+                self.read()
         else:
             self.prod_obj = producer(self.topic)
+        
 
-    def read(self):
+
+    def __read(self):
         self.con_obj.start_reading()
