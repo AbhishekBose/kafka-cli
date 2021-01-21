@@ -2,6 +2,7 @@ from __future__ import print_function, unicode_literals
 from PyInquirer import prompt, print_json
 from pprint import pprint
 from log import log
+import time
 
 class options:  
 
@@ -10,6 +11,8 @@ class options:
         color = "blue"
         log("Kafka CLI",color=color,figlet=True)
         log("Welcome to Kafka CLI", "green")
+        time.sleep(1)
+
     @staticmethod
     def opt_option():
         questions = [

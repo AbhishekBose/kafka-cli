@@ -2,6 +2,10 @@ from .consumer import consumer
 from .producer import producer
 from .admin import admin
 import time
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from cli.log import log
 '''
 Option 1 : Produce or consume
 Option 2: topic name
@@ -45,15 +49,15 @@ class KafkaBase(KafkaDetails):
                         continue
                         # print("Error occured. Trying to read next message")
                 except KeyboardInterrupt:
-                    print("\nPausing message consumption.. (Press any key to continue, type quit to exit.)")
+                    log("\nPausing message consumption.. (Press any key to continue, type quit to exit.)","yellow")
                     try:
                         response = input()
                         if response == 'quit':
-                            print("Shutting consumer. Goodbye")
+                            log("Shutting consumer. Goodbye","red")
                             break
-                        print('Resuming...')
+                        log('Resuming...',"green")
                     except KeyboardInterrupt:
-                        print('Resuming...')
+                        log('Resuming...',"green")
                         continue 
 
     # def __send(self):
