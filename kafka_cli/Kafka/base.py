@@ -6,11 +6,13 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from cli.log import log
+
 '''
 Option 1 : Produce or consume
 Option 2: topic name
 Option 3: Broker
 '''
+
 class KafkaDetails:
     def __init__(self,broker="localhost:9092"):
         self.admin_obj = admin(self.broker)
