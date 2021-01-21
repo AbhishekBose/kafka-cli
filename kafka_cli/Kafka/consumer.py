@@ -24,6 +24,19 @@ class consumer:
         return self.a.check_if_topic_present(self.topic)
 
         
+    def read_messages(self):
+        try:
+            msg = self.con.poll(0.1)
+            if msg is None:
+                return 0
+            elif msg.error():
+                return 0
+            print('Received message: {}'.format(msg.value().decode('utf-8')))
+            return 1
+        except Exception as e:
+            print("Exception during reading message :: {}".format(e))
+            return 0
+
     def start_reading(self):
         
         # try:
@@ -57,7 +70,7 @@ class consumer:
             except KeyboardInterrupt:
                 print("Shutting consumer...")
                 # self.stop()
-                break
+                return 1
             except RuntimeError:
                 break
 

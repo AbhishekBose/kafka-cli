@@ -1,6 +1,7 @@
 from .consumer import consumer
 from .producer import producer
 from .admin import admin
+import time
 '''
 Option 1 : Produce or consume
 Option 2: topic name
@@ -13,7 +14,10 @@ class KafkaDetails:
     
     def getTopicList(self):
         md = self.admin_obj.a.list_topics(timeout=10)
-        del(md.topics["__consumer_offsets"])
+        try:
+            del(md.topics["__consumer_offsets"])
+        except KeyError:
+            return []
         return list(md.topics.keys())
 
 
@@ -33,7 +37,24 @@ class KafkaBase(KafkaDetails):
     def start(self,topic_data):
         if self.type=="consume":
             self.con_obj = consumer(topic_data["topic"])
-            self.__read()
+            while True:
+                try:
+                    time.sleep(1)
+                    x= self.__read()
+                    if not x:
+                        continue
+                        # print("Error occured. Trying to read next message")
+                except KeyboardInterrupt:
+                    print("\nPausing message consumption.. (Press any key to continue, type quit to exit.)")
+                    try:
+                        response = input()
+                        if response == 'quit':
+                            print("Shutting consumer. Goodbye")
+                            break
+                        print('Resuming...')
+                    except KeyboardInterrupt:
+                        print('Resuming...')
+                        continue 
 
     # def __send(self):
     #     self.prod_obj.
@@ -42,4 +63,5 @@ class KafkaBase(KafkaDetails):
         return self.admin_obj.check_if_topic_present(data["topic"])
 
     def __read(self):
-        self.con_obj.start_reading()
+        x = self.con_obj.read_messages()
+        return x
