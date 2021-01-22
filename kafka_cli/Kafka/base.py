@@ -6,6 +6,7 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from cli.log import log
+import logging
 
 '''
 Option 1 : Produce or consume
@@ -40,6 +41,34 @@ class KafkaBase(KafkaDetails):
             # if option_dict["start"]:
             #     self.__send()
             
+    def __start_consumer(self):
+        return 1
+    
+    def __start_producer(self,topic_data):
+        self.prod_obj = producer(topic_data["topic"])
+        print("Prod object is :: {}".format(self.prod_obj))
+        try:
+            log("\nType your message and hit enter to send.. (Type quit to exit)","yellow")
+        except Exception as e:
+            logging.exception(e)
+        while True:
+            try:
+                response = input()
+                if response=="quit":
+                    break
+                self.prod_obj.produce(response)
+            except Exception as e:
+                logging.info("Exception occured during producing message")
+                logging.exception(e)
+            except KeyboardInterrupt:
+                log("Shutting producer. Goodbye","red")
+                break
+
+
+
+
+
+
     def start(self,topic_data):
         if self.type=="consume":
             self.con_obj = consumer(topic_data["topic"])
@@ -61,6 +90,10 @@ class KafkaBase(KafkaDetails):
                     except KeyboardInterrupt:
                         log('Resuming...',"green")
                         continue 
+        
+        if self.type=="produce":
+            print("I am here")
+            self.__start_producer(topic_data)
 
     # def __send(self):
     #     self.prod_obj.

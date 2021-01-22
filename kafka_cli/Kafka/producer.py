@@ -28,20 +28,22 @@ class producer:
         if err is not None:
             print('Message delivery failed: {}'.format(err))
         else:
-            print("Message successfully delivered")
-            # print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
+            # print("Message successfully delivered")
+            print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
 
 
-    def produce(self,msg,json_needed=True):
+    def produce(self,msg):
         # self.prod.poll(0)
-        if json_needed:
-            x = json.dumps(msg)
-        else:
-            x =msg.encode('utf-8')
-        self.prod.produce(self.topic,x,callback=self.__delivery_report)
-        self.prod.poll(0)
+        if msg!=None or msg!="":
+            json_message = json.dumps(msg)
+            try:
+                self.prod.produce(self.topic,json_message,callback=self.__delivery_report)
+                self.prod.poll(0)
+            except Exception as e:
+                print("Exception is :: {}".format(e))
+            self.prod.flush(30)
 
 # if __name__ == "__main__":
 #     prod = producer("test_topic")
-#     message = {"Hello"}
+#     message = {"message":"hello"}
 #     prod.produce(message)
