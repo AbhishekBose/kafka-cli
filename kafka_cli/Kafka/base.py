@@ -65,10 +65,6 @@ class KafkaBase(KafkaDetails):
                 break
 
 
-
-
-
-
     def start(self,topic_data):
         if self.type=="consume":
             self.con_obj = consumer(topic_data["topic"])

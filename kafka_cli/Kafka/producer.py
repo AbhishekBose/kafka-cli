@@ -35,7 +35,8 @@ class producer:
     def produce(self,msg):
         # self.prod.poll(0)
         if msg!=None or msg!="":
-            json_message = json.dumps(msg)
+            updated_msg = eval(msg)
+            json_message = json.dumps(updated_msg)
             try:
                 self.prod.produce(self.topic,json_message,callback=self.__delivery_report)
                 self.prod.poll(0)
