@@ -6,7 +6,7 @@ Produce and Consume messages easily
 The current functionalities include Producing messages to a topic or Consuming messages from one
 
 ```
->>> $kafka-cli
+$ kafka-cli
 ```
 
 Follow the instructions for producing and consuming messages from to and from your desired topic.
