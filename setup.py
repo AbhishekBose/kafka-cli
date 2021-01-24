@@ -25,7 +25,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
 setup (
  name = 'pykafka_cli',
  description = 'A simple commandline app for interacting with Kafka.',
- version = '1.0.0',
+ version = '1.1.0',
  packages = find_packages(), # list of all packages
  install_requires = install_requires,
  python_requires='>=3.0', # any python greater than 2.7
@@ -38,7 +38,7 @@ setup (
  long_description_content_type="text/markdown",
  license='MIT',
  url='https://github.com/AbhishekBose/kafka-cli',
-#  download_url='https://github.com/CITGuru/cver/archive/1.0.0.tar.gz',
+#  download_url='https://github.com/CITGuru/cver/archive/1.1.0.tar.gz',
   dependency_links=dependency_links,
   author_email='abose550@gmail.com',
   classifiers=[
