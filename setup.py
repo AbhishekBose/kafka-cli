@@ -23,7 +23,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
 
 
 setup (
- name = 'Kafka-CLI',
+ name = 'pykafka_cli',
  description = 'A simple commandline app for interacting with Kafka.',
  version = '1.0.0',
  packages = find_packages(), # list of all packages
