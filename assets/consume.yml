@@ -1,0 +1,245 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /code/kafka_cli_tool
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 176
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 23
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 556
+    content: "(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 1026
+    content: k
+  - delay: 91
+    content: a
+  - delay: 70
+    content: f
+  - delay: 111
+    content: k
+  - delay: 92
+    content: a
+  - delay: 319
+    content: '-'
+  - delay: 593
+    content: c
+  - delay: 85
+    content: l
+  - delay: 158
+    content: i
+  - delay: 473
+    content: "\r\n"
+  - delay: 318
+    content: "\e[34m    __ __      ______            ________    ____\r\n   / //_/___ _/ __/ /______ _   / ____/ /   /  _/\r\n  / ,< / __ `/ /_/ //_/ __ `/  / /   / /    / /  \r\n / /| / /_/ / __/ ,< / /_/ /  / /___/ /____/ /   \r\n/_/ |_\\__,_/_/ /_/|_|\\__,_/   \\____/_____/___/   \r\n                                                 \r\n\e[0m\r\n\e[32mWelcome to Kafka CLI\e[0m\r\n"
+  - delay: 1042
+    content: "\e[?1l\e[6n\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m What operation do you want to perform? \e[0m (Use arrow keys)\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mProduce\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mC\e[0mo\e[0mn\e[0ms\e[0mu\e[0mm\e[0me\e[10D\e[2A\e[0m"
+  - delay: 14
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[9A\e[0m"
+  - delay: 462
+    content: "\e[?25l\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mP\e[0mr\e[0mo\e[0md\e[0mu\e[0mc\e[0me\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mConsume\e[2A\e[10D\e[0m"
+  - delay: 243
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m What operation do you want to perform? \e[0;38;5;214;1m Consume\e[49D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l"
+  - delay: 34
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Is your broker localhost:9092? \e[0m (Y/n)\e[39D\e[39C\e[0m\e[?12l\e[?25h"
+  - delay: 20
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[8A\e[39C\e[0m\e[?12l\e[?25h"
+  - delay: 1218
+    content: "\e[?25l\e[39D\e[0m\e[J\e[0;38;5;67m?\e[0;1m Is your broker localhost:9092? \e[0;38;5;214;1m Yes\e[37D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l{'choices': 'consume', 'broker': 'localhost:9092'}\r\n"
+  - delay: 11
+    content: "\e[?1l\e[6n\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Select topic from below. Choose other in case not present: \e[0m (Use arrow keys)\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mother\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[12D\e[5A\e[0m"
+  - delay: 8
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[6A\e[0m"
+  - delay: 1155
+    content: "\e[?25l\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mo\e[0mt\e[0mh\e[0me\e[0mr\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mnew_topic_2\e[2A\e[14D\e[0m"
+  - delay: 205
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest_topic\e[3A\e[15D\e[0m"
+  - delay: 108
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest\e[4A\e[9D\e[0m"
+  - delay: 159
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mnew_topic\e[5A\e[12D\e[0m"
+  - delay: 556
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[5A\e[12D\e[0m"
+  - delay: 138
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest_topic\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[4A\e[9D\e[0m"
+  - delay: 159
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\e[0;38;5;214;1m ❯ \e[0mnew_topic_2\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[3A\e[15D\e[0m"
+  - delay: 149
+    content: "\e[?25l\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mother\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[2A\e[14D\e[0m"
+  - delay: 402
+    content: "\e[?25l\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mo\e[0mt\e[0mh\e[0me\e[0mr\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mnew_topic_2\e[2A\e[14D\e[0m"
+  - delay: 156
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest_topic\e[3A\e[15D\e[0m"
+  - delay: 156
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest\e[4A\e[9D\e[0m"
+  - delay: 550
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\e[0;38;5;214;1m ❯ \e[0mlatest_topic\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[4A\e[9D\e[0m"
+  - delay: 156
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\e[0;38;5;214;1m ❯ \e[0mnew_topic_2\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[3A\e[15D\e[0m"
+  - delay: 171
+    content: "\e[?25l\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mother\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[2A\e[14D\e[0m"
+  - delay: 1298
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m Select topic from below. Choose other in case not present: \e[0;38;5;214;1m other\e[67D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l"
+  - delay: 9
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m What is the name of your topic?  \e[35D\e[35C\e[0m\e[?12l\e[?25h"
+  - delay: 5
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[5A\e[35C\e[0m\e[?12l\e[?25h"
+  - delay: 2132
+    content: "\e[?25l\e[0;38;5;214;1ml\e[0m\e[?12l\e[?25h"
+  - delay: 95
+    content: "\e[?25l\e[0;38;5;214;1ma\e[0m\e[?12l\e[?25h"
+  - delay: 134
+    content: "\e[?25l\e[0;38;5;214;1mt\e[0m\e[?12l\e[?25h"
+  - delay: 44
+    content: "\e[?25l\e[0;38;5;214;1me\e[0m\e[?12l\e[?25h"
+  - delay: 152
+    content: "\e[?25l\e[0;38;5;214;1ms\e[0m\e[?12l\e[?25h"
+  - delay: 114
+    content: "\e[?25l\e[0;38;5;214;1mt\e[0m\e[?12l\e[?25h"
+  - delay: 589
+    content: "\e[?25l\e[0;38;5;214;1m_\e[0m\e[?12l\e[?25h"
+  - delay: 120
+    content: "\e[?25l\e[0;38;5;214;1mc\e[0m\e[?12l\e[?25h"
+  - delay: 152
+    content: "\e[?25l\e[0;38;5;214;1mo\e[0m\e[?12l\e[?25h"
+  - delay: 52
+    content: "\e[?25l\e[0;38;5;214;1mn\e[0m\e[?12l\e[?25h"
+  - delay: 79
+    content: "\e[?25l\e[0;38;5;214;1ms\e[0m\e[?12l\e[?25h"
+  - delay: 122
+    content: "\e[?25l\e[0;38;5;214;1mu\e[0m\e[?12l\e[?25h"
+  - delay: 158
+    content: "\e[?25l\e[0;38;5;214;1mm\e[0m\e[?12l\e[?25h"
+  - delay: 111
+    content: "\e[?25l\e[0;38;5;214;1me\e[0m\e[?12l\e[?25h"
+  - delay: 706
+    content: "\e[?25l\e[49D\e[0m\e[J\e[0;38;5;67m?\e[0;1m What is the name of your topic?  \e[0;38;5;214;1mlatest_consume\e[49D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l{'topic': 'latest_consume'}\r\ndict_keys(['new_topic_2', '__consumer_offsets', 'latest_topic', 'latest', 'new_topic'])\r\nTopic not present\r\n"
+  - delay: 43
+    content: "Topic latest_consume created\r\n"
+  - delay: 13
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Shall we start reading messages? \e[0m (Y/n)\e[41D\e[41C\e[0m\e[?12l\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[0m\e[?12l\e[?25h"
+  - delay: 1353
+    content: "\e[?25l\e[41D\e[0m\e[J\e[0;38;5;67m?\e[0;1m Shall we start reading messages? \e[0;38;5;214;1m Yes\e[39D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l"
+  - delay: 6870
+    content: "^C\e[33m\r\nPausing message consumption.. (Press any key to continue, type quit to exit.)\e[0m\r\n"
+  - delay: 1314
+    content: q
+  - delay: 255
+    content: u
+  - delay: 89
+    content: i
+  - delay: 121
+    content: t
+  - delay: 948
+    content: "\r\n\e[31mShutting consumer. Goodbye\e[0m\r\n\e[0m"
+  - delay: 32
+    content: "(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 1106
+    content: "\e[H\e[2J(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 826
+    content: "logout\r\n"

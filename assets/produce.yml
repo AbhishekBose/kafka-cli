@@ -1,0 +1,223 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /code/kafka_cli_tool
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 176
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 23
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 570
+    content: "(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 1624
+    content: "\e[H\e[2J(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 1435
+    content: k
+  - delay: 55
+    content: a
+  - delay: 84
+    content: f
+  - delay: 130
+    content: k
+  - delay: 94
+    content: a
+  - delay: 740
+    content: '-'
+  - delay: 91
+    content: c
+  - delay: 92
+    content: l
+  - delay: 156
+    content: i
+  - delay: 253
+    content: "\r\n"
+  - delay: 311
+    content: "\e[34m    __ __      ______            ________    ____\r\n   / //_/___ _/ __/ /______ _   / ____/ /   /  _/\r\n  / ,< / __ `/ /_/ //_/ __ `/  / /   / /    / /  \r\n / /| / /_/ / __/ ,< / /_/ /  / /___/ /____/ /   \r\n/_/ |_\\__,_/_/ /_/|_|\\__,_/   \\____/_____/___/   \r\n                                                 \r\n\e[0m\r\n\e[32mWelcome to Kafka CLI\e[0m\r\n"
+  - delay: 1015
+    content: "\e[?1l\e[6n\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m What operation do you want to perform? \e[0m (Use arrow keys)\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mProduce\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mC\e[0mo\e[0mn\e[0ms\e[0mu\e[0mm\e[0me\e[10D\e[2A\e[0m"
+  - delay: 11
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[13A\e[0m"
+  - delay: 1319
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m What operation do you want to perform? \e[0;38;5;214;1m Produce\e[49D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l"
+  - delay: 8
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Is your broker localhost:9092? \e[0m (Y/n)\e[39D\e[39C\e[0m\e[?12l\e[?25h"
+  - delay: 15
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[12A\e[39C\e[0m\e[?12l\e[?25h"
+  - delay: 1078
+    content: "\e[?25l\e[39D\e[0m\e[J\e[0;38;5;67m?\e[0;1m Is your broker localhost:9092? \e[0;38;5;214;1m Yes\e[37D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l{'choices': 'produce', 'broker': 'localhost:9092'}\r\n"
+  - delay: 47
+    content: "\e[?1l\e[6n\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Select topic from below. Choose other in case not present: \e[0m (Use arrow keys)\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mother\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m_\e[0m2\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mn\e[0me\e[0mw\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0ml\e[0ma\e[0mt\e[0me\e[0ms\e[0mt\e[0m_\e[0mt\e[0mo\e[0mp\e[0mi\e[0mc\e[15D\e[4A\e[0m"
+  - delay: 14
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[10A\e[0m"
+  - delay: 173
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m Select topic from below. Choose other in case not present: \e[0;38;5;214;1m other\e[67D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l"
+  - delay: 33
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m What is the name of your topic?  \e[35D\e[35C\e[0m\e[?12l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[9A\e[35C\e[0m\e[?12l\e[?25h"
+  - delay: 2704
+    content: "\e[?25l\e[0;38;5;214;1ml\e[0m\e[?12l\e[?25h"
+  - delay: 90
+    content: "\e[?25l\e[0;38;5;214;1ma\e[0m\e[?12l\e[?25h"
+  - delay: 118
+    content: "\e[?25l\e[0;38;5;214;1mt\e[0m\e[?12l\e[?25h"
+  - delay: 78
+    content: "\e[?25l\e[0;38;5;214;1me\e[0m\e[?12l\e[?25h"
+  - delay: 154
+    content: "\e[?25l\e[0;38;5;214;1ms\e[0m\e[?12l\e[?25h"
+  - delay: 103
+    content: "\e[?25l\e[0;38;5;214;1mt\e[0m\e[?12l\e[?25h"
+  - delay: 246
+    content: "\e[?25l\e[41D\e[0m\e[J\e[0;38;5;67m?\e[0;1m What is the name of your topic?  \e[0;38;5;214;1mlatest\e[41D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l{'topic': 'latest'}\r\ndict_keys(['__consumer_offsets', 'new_topic_2', 'new_topic', 'latest_topic'])\r\nTopic not present\r\n"
+  - delay: 106
+    content: "Topic latest created\r\n"
+  - delay: 35
+    content: "\e[?1l\e[6n\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m Shall we start producing messages? \e[0m (Y/n)\e[43D\e[43C\e[0m\e[?12l\e[?25h"
+  - delay: 12
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\e[4A\e[43C\e[0m\e[?12l\e[?25h"
+  - delay: 1818
+    content: "\e[?25l\e[43D\e[0m\e[J\e[0;38;5;67m?\e[0;1m Shall we start producing messages? \e[0;38;5;214;1m Yes\e[41D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004lI am here\r\ndict_keys(['new_topic_2', '__consumer_offsets', 'latest_topic', 'latest', 'new_topic'])\r\nlatest already present\r\nProd object is :: <Kafka.producer.producer object at 0x7f7d9245ce50>\r\n\e[33m\r\nType your message and hit enter to send.. (Type quit to exit)\e[0m\r\n"
+  - delay: 1064
+    content: '1'
+  - delay: 219
+    content: "\r\n"
+  - delay: 743
+    content: "Message delivered to latest [0]\r\n"
+  - delay: 683
+    content: '2'
+  - delay: 237
+    content: "\r\n"
+  - delay: 8
+    content: "Message delivered to latest [0]\r\n"
+  - delay: 804
+    content: '3'
+  - delay: 163
+    content: "\r\n"
+  - delay: 9
+    content: "Message delivered to latest [1]\r\n"
+  - delay: 558
+    content: '4'
+  - delay: 155
+    content: "\r\n"
+  - delay: 7
+    content: "Message delivered to latest [1]\r\n"
+  - delay: 1803
+    content: q
+  - delay: 236
+    content: u
+  - delay: 51
+    content: i
+  - delay: 169
+    content: t
+  - delay: 287
+    content: "\r\n\e[0m"
+  - delay: 58
+    content: "(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 1627
+    content: "\e[H\e[2J(base) \e]0;abhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx: /code/kafka_cli_tool\a\e[01;32mabhishek@abhishek-HP-Pavilion-Gaming-Laptop-15-cx0xxx\e[00m:\e[01;34m/code/kafka_cli_tool\e[00m$ "
+  - delay: 145
+    content: "logout\r\n"
