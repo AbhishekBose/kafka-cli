@@ -5,7 +5,8 @@ __pycache__/
 
 .metals/
 .vscode/
-
+configure_project.sh
+*.Dockerfile
 
 # C extensions
 *.so
