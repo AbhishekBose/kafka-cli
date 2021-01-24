@@ -30,14 +30,14 @@ setup (
  install_requires = install_requires,
  python_requires='>=3.0', # any python greater than 2.7
  entry_points={
-     'console_scripts': ["kafka-cli=kafka_cli.cli:main"]
+     'console_scripts': ["kafka-cli=kafka_cli.cli.main:start"]
  },
  author="Abhishek Bose",
  keyword="kafka cli",
  long_description=README,
  long_description_content_type="text/markdown",
  license='MIT',
-#  url='https://github.com/CITGuru/cver',
+ url='https://github.com/AbhishekBose/kafka-cli',
 #  download_url='https://github.com/CITGuru/cver/archive/1.0.0.tar.gz',
   dependency_links=dependency_links,
   author_email='abose550@gmail.com',
