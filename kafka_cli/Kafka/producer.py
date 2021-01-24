@@ -39,8 +39,8 @@ class producer:
                 updated_msg = eval(msg)
             except NameError:
                 # print("Type is :: {}".format(type(msg)))
-                if type=="str":
-                    updated_msg = msg
+                # if type(msg)=="str":
+                updated_msg = msg
             json_message = json.dumps(updated_msg)
             try:
                 self.prod.produce(self.topic,json_message,callback=self.__delivery_report)
