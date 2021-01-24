@@ -35,7 +35,12 @@ class producer:
     def produce(self,msg):
         # self.prod.poll(0)
         if msg!=None or msg!="":
-            updated_msg = eval(msg)
+            try:
+                updated_msg = eval(msg)
+            except NameError:
+                # print("Type is :: {}".format(type(msg)))
+                if type=="str":
+                    updated_msg = msg
             json_message = json.dumps(updated_msg)
             try:
                 self.prod.produce(self.topic,json_message,callback=self.__delivery_report)
