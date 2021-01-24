@@ -6,8 +6,8 @@ import pathlib
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
 
-README = (HERE / "README.md").read_text()
-print(README)
+DESC = (HERE / "DESC.md").read_text()
+print(DESC)
 
 # automatically captured required modules for install_requires in requirements.txt and as well as configure dependency links
 
@@ -34,7 +34,7 @@ setup (
  },
  author="Abhishek Bose",
  keyword="kafka cli",
- long_description=README,
+ long_description=DESC,
  long_description_content_type="text/markdown",
  license='MIT',
  url='https://github.com/AbhishekBose/kafka-cli',
