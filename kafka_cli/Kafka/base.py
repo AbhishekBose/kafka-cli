@@ -55,7 +55,9 @@ class KafkaBase(KafkaDetails):
             try:
                 response = input()
                 if response=="quit":
-                    break
+                    return True
+                elif response=="back":
+                    return False
                 self.prod_obj.produce(response)
             except Exception as e:
                 logging.info("Exception occured during producing message")
@@ -89,7 +91,8 @@ class KafkaBase(KafkaDetails):
         
         if self.type=="produce":
             print("I am here")
-            self.__start_producer(topic_data)
+            status_flag = self.__start_producer(topic_data)
+            return status_flag
 
     # def __send(self):
     #     self.prod_obj.

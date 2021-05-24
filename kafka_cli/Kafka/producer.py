@@ -41,12 +41,12 @@ class producer:
                 # print("Type is :: {}".format(type(msg)))
                 # if type(msg)=="str":
                 updated_msg = msg
-            json_message = json.dumps(updated_msg)
             try:
+                json_message = json.dumps(updated_msg)
                 self.prod.produce(self.topic,json_message,callback=self.__delivery_report)
                 self.prod.poll(0)
-            except Exception as e:
-                print("Exception is :: {}".format(e))
+            except TypeError:
+                print("Incorrect message format")
             self.prod.flush(30)
 
 # if __name__ == "__main__":

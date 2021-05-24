@@ -1,6 +1,5 @@
 confluent-kafka
 python-dotenv
-python-dotenv
 coverage
 prompt-toolkit
 pydantic
