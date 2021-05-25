@@ -90,7 +90,6 @@ class KafkaBase(KafkaDetails):
                         continue 
         
         if self.type=="produce":
-            print("I am here")
             status_flag = self.__start_producer(topic_data)
             return status_flag
 
