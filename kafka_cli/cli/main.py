@@ -9,10 +9,9 @@ import time
 
 def start():
     exit_flag = False
+    options.greet()
     try:
         while not exit_flag:
-            options.greet()
-            
             opt_answers = options.opt_option()
             print(opt_answers)
             kafkaObj = KafkaBase(opt_answers)
@@ -23,6 +22,8 @@ def start():
                 response = options.confirm_opt(opt_answers)
                 if response["start"]:
                     exit_flag = kafkaObj.start(topic_answers)
+                    if not exit_flag:
+                        continue
 
     except Exception:
         exit()

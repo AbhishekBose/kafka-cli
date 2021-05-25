@@ -48,7 +48,7 @@ class KafkaBase(KafkaDetails):
         self.prod_obj = producer(topic_data["topic"])
         print("Prod object is :: {}".format(self.prod_obj))
         try:
-            log("\nType your message and hit enter to send.. (Type quit to exit)","yellow")
+            log("\nType your message and hit enter to send.. (Type quit to exit or back for previous menu)","yellow")
         except Exception as e:
             logging.exception(e)
         while True:
@@ -64,7 +64,7 @@ class KafkaBase(KafkaDetails):
                 logging.exception(e)
             except KeyboardInterrupt:
                 log("Shutting producer. Goodbye","red")
-                break
+                exit()
 
 
     def start(self,topic_data):
@@ -83,11 +83,11 @@ class KafkaBase(KafkaDetails):
                         response = input()
                         if response == 'quit':
                             log("Shutting consumer. Goodbye","red")
-                            break
+                            exit()
                         log('Resuming...',"green")
                     except KeyboardInterrupt:
-                        log('Resuming...',"green")
-                        continue 
+                        log('Exiting',"green")
+                        exit() 
         
         if self.type=="produce":
             status_flag = self.__start_producer(topic_data)
