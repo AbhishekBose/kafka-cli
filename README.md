@@ -1,6 +1,7 @@
 CLI tool for Kafka.
 Produce and Consume messages easily
 
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 [![PyPI version](https://badge.fury.io/py/pykafka-cli.svg)](https://badge.fury.io/py/pykafka-cli)
 
 ## How to Use the tool
