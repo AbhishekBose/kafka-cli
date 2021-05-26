@@ -25,7 +25,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs \
 setup (
  name = 'pykafka_cli',
  description = 'A simple commandline app for interacting with Kafka.',
- version = '1.1.3',
+ version = '1.2.0',
  packages = find_packages(), # list of all packages
  install_requires = install_requires,
  python_requires='>=3.0', # any python greater than 2.7
