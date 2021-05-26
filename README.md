@@ -1,6 +1,8 @@
 CLI tool for Kafka.
 Produce and Consume messages easily
 
+[![PyPI version](https://badge.fury.io/py/pykafka-cli.svg)](https://badge.fury.io/py/pykafka-cli)
+
 ## How to Use the tool
 
 The current functionalities include Producing messages to a topic or Consuming messages from one
